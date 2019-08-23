@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_splash"
+            >
+
+    <fragment
+        android:id="@+id/stepperFragment"
+        android:name="com.luisansal.bltx.ui.features.stepper.StepperFragment"
+        android:label="StepperFragment"
+        tools:layout="@layout/fragment_stepper">
+
+        <action
+            android:id="@+id/toMainActivity"
+            app:destination="@id/stepperToMainActivity"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/brujulaFragment"
+            android:name="com.luisansal.bltx.ui.features.brujula.BrujulaFragment"
+            android:label="BrujulaFragment"
+            tools:layout="@layout/fragment_brujula">
+
+        <action
+                android:id="@+id/toMainActivity"
+                app:destination="@id/stepperToMainActivity"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/shakerFragment"
+            android:name="com.luisansal.bltx.ui.features.shaker.ShakerFragment"
+            android:label="ShakerFragment"
+            tools:layout="@layout/fragment_shaker">
+
+        <action
+                android:id="@+id/toMainActivity"
+                app:destination="@id/stepperToMainActivity"/>
+    </fragment>
+
+    <activity
+        android:id="@+id/stepperToMainActivity"
+        android:name="com.luisansal.bltx.MainActivity"
+        android:label="MainActivity"
+        tools:layout="@layout/activity_main"/>
+
+</navigation>
