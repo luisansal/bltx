@@ -4,12 +4,8 @@ import android.content.Context
 import android.os.AsyncTask
 import android.util.Log
 
-import com.google.android.gms.maps.model.LatLng
 import com.luisansal.bltx.model.dao.UserDao
-import com.luisansal.bltx.model.dao.UserVisitsDao
-import com.luisansal.bltx.model.dao.VisitDao
 import com.luisansal.bltx.model.domain.User
-import com.luisansal.bltx.model.domain.Visit
 import com.luisansal.bltx.model.domain.converter.LatLngConverter
 
 import java.util.ArrayList
@@ -22,25 +18,19 @@ import com.luisansal.bltx.model.dao.AuthorDao
 import com.luisansal.bltx.model.domain.Author
 import java.lang.Exception
 
-@Database(entities = [User::class, Visit::class, Author::class], version = 8)
-@TypeConverters(LatLngConverter::class)
+@Database(entities = [User::class, Author::class], version = 8)
+//@TypeConverters(LatLngConverter::class)
 abstract class MyRoomDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao
-
-    abstract fun visitDao(): VisitDao
-
-    abstract fun userVisitsDao(): UserVisitsDao
 
     abstract fun authorDao(): AuthorDao
 
     private class PopulateDbAsync(myRoomDatabase: MyRoomDatabase) : AsyncTask<Void, Void, Void>() {
 
         private val userDao: UserDao
-        private val visitDao: VisitDao
 
         init {
             userDao = myRoomDatabase.userDao()
-            visitDao = myRoomDatabase.visitDao()
         }
 
         override fun doInBackground(vararg voids: Void): Void? {
@@ -49,10 +39,6 @@ abstract class MyRoomDatabase : RoomDatabase() {
             var user = User("05159410", "Juan", "Alvarez")
 
             val lastUserId = userDao.save(user)
-
-            val visit = Visit(LatLng(-35.0, 151.0), lastUserId)
-
-            visitDao.save(visit)
 
             val users = ArrayList<User>()
             for (i in 0..999) {

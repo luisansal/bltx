@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">bltx</string>
+    <string name="go_to_stepper">Go to Stepper</string>
+    <string name="go_to_brujula">Go to Brujula</string>
+    <string name="go_to_shaker">Go to Shaker</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="validar_fragment">Validar Fragment</string>
 </resources>

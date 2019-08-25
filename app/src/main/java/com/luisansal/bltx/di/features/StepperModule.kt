@@ -1,9 +1,10 @@
 package com.luisansal.bltx.di.features
 
+import com.luisansal.bltx.ui.features.stepper.StepperFragmentPresenter
 import org.koin.dsl.module
 
 val steppermodule = module {
 
-//    factory { params -> TipsDesarrolloPresenter(view = params[0], useCase = get(), mapper = get()) }
+    factory { params -> StepperFragmentPresenter(mView = params[0], mUseCase = get()) }
 
 }

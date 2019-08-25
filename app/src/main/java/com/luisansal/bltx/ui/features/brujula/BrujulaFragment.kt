@@ -2,13 +2,11 @@ package com.luisansal.bltx.ui.features.brujula
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.Fragment
+import com.luisansal.bltx.R
+import com.luisansal.bltx.common.BaseFragment
 
-class BrujulaFragment : Fragment(), BrujulaFragmentMVP.View {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+class BrujulaFragment : BaseFragment(), BrujulaFragmentMVP.View {
+    override fun getLayout() = R.layout.fragment_brujula
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

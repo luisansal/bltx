@@ -2,14 +2,14 @@ package com.luisansal.bltx.ui.features.stepper.fragments
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.Fragment
-import com.luisansal.bltx.ui.features.stepper.StepperFragmentMVP
+import com.luisansal.bltx.R
+import com.luisansal.bltx.ui.features.stepper.base.BaseStepperFragment
 
-class Step1Fragment : Fragment(), StepperFragmentMVP.View{
+class Step1Fragment : BaseStepperFragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    override fun getLayout() = R.layout.fragment_step1
+
+    override val requireValidation: Boolean = false
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

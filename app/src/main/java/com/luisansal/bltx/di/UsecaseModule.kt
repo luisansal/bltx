@@ -1,10 +1,10 @@
 package com.luisansal.bltx.di
 
-import org.koin.dsl.module.module
-
+import com.luisansal.bltx.ui.features.stepper.StepperUseCase
+import org.koin.dsl.module
 
 val usecasemodule = module {
 
-//    factory { params -> TipsDesarrolloPresenter(view = params[0], useCase = get(), mapper = get()) }
+    factory { StepperUseCase() }
 
 }

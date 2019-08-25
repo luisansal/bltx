@@ -3,7 +3,6 @@ package com.luisansal.bltx.model.dao
 import com.luisansal.bltx.model.domain.User
 
 import androidx.lifecycle.LiveData
-import androidx.paging.DataSource
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -25,12 +24,6 @@ interface UserDao {
 
     @Query("SELECT * from tbluser ORDER BY nombre ASC")
     fun findAllUsersInline(): List<User>
-
-    // The Integer type parameter tells Room to use a PositionalDataSource
-    // object, with position-based loading under the hood.
-    @Query("SELECT * FROM tbluser ORDER BY nombre asc")
-    fun findAllUsersPaging(): DataSource.Factory<Int, User>
-
 
     @Query("SELECT * from tbluser where dni = :dni")
     fun findOneByDni(dni: String): User

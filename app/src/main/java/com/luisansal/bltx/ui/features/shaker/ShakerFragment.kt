@@ -2,16 +2,15 @@ package com.luisansal.bltx.ui.features.shaker
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.Fragment
+import com.luisansal.bltx.R
+import com.luisansal.bltx.common.BaseFragment
 
-class ShakerFragment : Fragment(), ShakerFragmentMVP.View {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+class ShakerFragment : BaseFragment(), ShakerFragmentMVP.View {
+    override fun getLayout() = R.layout.fragment_shaker
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
     }
 
 }

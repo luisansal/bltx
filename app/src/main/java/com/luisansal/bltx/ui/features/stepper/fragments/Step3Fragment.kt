@@ -1,4 +1,21 @@
 package com.luisansal.bltx.ui.features.stepper.fragments
 
-class Step3Fragment {
+import android.os.Bundle
+import android.view.View
+import com.luisansal.bltx.R
+import com.luisansal.bltx.ui.features.stepper.base.BaseStepperFragment
+import kotlinx.android.synthetic.main.fragment_step3.chkValidate
+
+class Step3Fragment : BaseStepperFragment() {
+
+    override fun getLayout() = R.layout.fragment_step3
+
+    override val requireValidation: Boolean = true
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        chkValidate.setOnClickListener {
+            isValidated = chkValidate.isChecked
+        }
+    }
 }
