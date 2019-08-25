@@ -1,4 +1,4 @@
-package com.luisansal.bltx.ui.features.stepper.adapters
+package com.luisansal.bltx.ui.components.stepper.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

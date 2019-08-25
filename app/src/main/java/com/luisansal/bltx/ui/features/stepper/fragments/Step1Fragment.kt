@@ -3,7 +3,7 @@ package com.luisansal.bltx.ui.features.stepper.fragments
 import android.os.Bundle
 import android.view.View
 import com.luisansal.bltx.R
-import com.luisansal.bltx.ui.features.stepper.base.BaseStepperFragment
+import com.luisansal.bltx.ui.components.stepper.base.BaseStepperFragment
 
 class Step1Fragment : BaseStepperFragment() {
 
