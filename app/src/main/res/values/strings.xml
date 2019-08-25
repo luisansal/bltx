@@ -5,5 +5,7 @@
     <string name="go_to_shaker">Go to Shaker</string>
     <string name="next">Next</string>
     <string name="back">Back</string>
-    <string name="validar_fragment">Validar Fragment</string>
+    <string name="validate_fragment">Validate Fragment</string>
+    <string name="default_direction">You are heading...</string>
+    <string name="fill_the_degrees">Fill the degrees</string>
 </resources>
