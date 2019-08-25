@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Welcome to brujula fragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    </TextView>
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+      <EditText
+         android:id="@+id/etDegrees"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          android:hint="@string/fill_the_degrees"
+          android:inputType="number"
+          />
+
+      <com.luisansal.bltx.ui.components.brujula.BrujulaComponent
+          android:id="@+id/brujulaComponent"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/etDegrees"
+          app:layout_constraintBottom_toBottomOf="parent"
+          />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

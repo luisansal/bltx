@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:text="@string/validar_fragment"
+        android:text="@string/validate_fragment"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
