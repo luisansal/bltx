@@ -6,25 +6,11 @@ import androidx.lifecycle.LifecycleOwner
 interface IStepperMVP {
 
     interface View : LifecycleOwner{
-        fun setupViewPager(fragments : List<Fragment>)
-        fun setupTab()
-        fun onClickNext()
-        fun onClickBack()
-        fun moveToNext()
-        fun returnBack()
-        fun disableTouchTab()
-        fun disableTouchViewPager()
-        val notRequiredValidate : Boolean
-        fun showValidationMessage(message : String)
-        val currentFragment : Fragment?
-        var isTheLast : Boolean
+        fun setupStepper(fragments: List<Fragment>)
     }
 
     interface Presenter{
         fun init()
-        fun validateNext()
-        fun validateIfLast()
-        fun bindViewPager()
     }
 
 }

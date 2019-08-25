@@ -1,4 +1,4 @@
-package com.luisansal.bltx.ui.features.stepper.base
+package com.luisansal.bltx.ui.components.stepper.base
 
 import com.luisansal.bltx.common.BaseFragment
 
