@@ -9,17 +9,23 @@
 
     <Button
         android:id="@+id/btnStepper"
+        style="@style/Widget.MaterialComponents.Button"
+        android:textSize="20sp"
+        android:padding="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/go_to_stepper"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="141dp"
+        android:layout_marginTop="100dp"
         />
 
     <Button
         android:id="@+id/btnBrujula"
+        style="@style/Widget.MaterialComponents.Button"
+        android:textSize="20sp"
+        android:padding="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/go_to_brujula"
@@ -32,13 +38,16 @@
 
     <Button
         android:id="@+id/btnShaker"
+        style="@style/Widget.MaterialComponents.Button"
+        android:textSize="20sp"
+        android:padding="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/go_to_shaker"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="144dp"
+        android:layout_marginBottom="100dp"
         />
 
 
