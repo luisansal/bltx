@@ -8,4 +8,5 @@
     <string name="validate_fragment">Validate Fragment</string>
     <string name="default_direction">You are heading...</string>
     <string name="fill_the_degrees">Fill the degrees</string>
+    <string name="please_shake_your_device">Please Shake Your Device!!!</string>
 </resources>
