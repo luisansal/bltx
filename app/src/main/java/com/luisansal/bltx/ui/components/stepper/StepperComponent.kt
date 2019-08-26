@@ -15,23 +15,18 @@ class StepperComponent(context: Context?, attrs: AttributeSet?, defStyleAttr: In
     IStepperMVP.View {
     constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs, 0)
 
-    private var mFragments = emptyList<Fragment>()
     private lateinit var mFragmentManager : FragmentManager
     private lateinit var mPresenter : StepperComponentPresenter
 
     override fun setup(fragments: List<Fragment>, fm: FragmentManager) {
-        mFragments = fragments
         mFragmentManager = fm
-        mPresenter = StepperComponentPresenter(this, mFragments)
+        mPresenter = StepperComponentPresenter(this, fragments)
         mPresenter.init()
     }
-
-
 
     init {
         LayoutInflater.from(context)
             .inflate(R.layout.stepper_component, this, true)
-
     }
 
     override var isTheLast: Boolean = false

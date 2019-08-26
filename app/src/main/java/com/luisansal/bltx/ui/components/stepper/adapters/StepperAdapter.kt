@@ -25,6 +25,6 @@ class StepperAdapter : FragmentPagerAdapter {
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
-        return (position+1).toString()
+        return "Step " + (position + 1).toString()
     }
 }

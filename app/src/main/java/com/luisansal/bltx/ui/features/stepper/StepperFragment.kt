@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.fragment_stepper.*
 class StepperFragment : BaseFragment(), IStepperMVP.View {
 
     override fun setupStepper(fragments: List<Fragment>) {
-        stepperComponent.setup(fragments, fragmentManager!!)
+        stepperComponent.setup(fragments, childFragmentManager)
     }
 
     val mPresenter: StepperFragmentPresenter by injectFragment()
